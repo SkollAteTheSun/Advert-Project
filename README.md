@@ -10,6 +10,8 @@
 4. выполнить команду python manage.py makemigrations
 5. выполнить команду python manage.py migrate
 6. выполнить команду python manage.py createsuperuser
+
+
    перейти по адресу http://127.0.0.1:8000/admin/ - для входа в кабинет администратора
    перейти по адресу http://127.0.0.1:8000/api/schema/swagger-ui/ - документация
 
@@ -23,6 +25,8 @@
 7. выполнить команду python manage.py makemigrations
 8. выполнить команду python manage.py migrate
 9. выполнить команду python manage.py createsuperuser
+
+   
    перейти по адресу http://127.0.0.1:8000/admin/ - для входа в кабинет администратора
    перейти по адресу http://127.0.0.1:8000/api/schema/swagger-ui/ - документация
 
