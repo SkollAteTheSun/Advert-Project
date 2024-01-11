@@ -1,6 +1,6 @@
 from django.db import models
 
-from authentication.models import CustomUser
+from django.contrib.auth.models import User
 
 class Category(models.Model):
 
@@ -15,7 +15,7 @@ class Category(models.Model):
 
 class Advert(models.Model):
 
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='adverts', verbose_name="Автор объявления")
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='adverts', verbose_name="Автор объявления")
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='adverts', verbose_name="Категория вещи")
     name = models.CharField(max_length=60, verbose_name="Название объявления")
     description = models.TextField(verbose_name="Описание")
@@ -31,7 +31,7 @@ class Advert(models.Model):
 
 class Proposal(models.Model):
 
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='proposals', verbose_name="Автор заявки")
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='proposals', verbose_name="Автор заявки")
     advert = models.ForeignKey(Advert, on_delete=models.CASCADE,related_name='proposals', verbose_name="Объявление")
     reward = models.IntegerField(blank=True, null=True, verbose_name="Денежное вознаграждение")
     comment = models.CharField(max_length= 120, blank=True, null=True, verbose_name="Комментарий к заявке")

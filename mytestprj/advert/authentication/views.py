@@ -1,58 +1,91 @@
+from django.http import Http404
 from drf_spectacular.utils import extend_schema
-from rest_framework import generics, permissions, status
-from rest_framework.response import Response
+from rest_framework import generics, status
 from rest_framework.views import APIView
-from django.contrib.auth import authenticate, login, logout
-from .models import *
-from .serializers import *
-
-
+from rest_framework.response import Response
+from rest_framework.exceptions import AuthenticationFailed
+from django.contrib.auth.models import User
+from .serializers import UserSerializers
+from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework.permissions import IsAuthenticated
 
 @extend_schema(tags=["Authentication"])
-class UserRegistrationAPIView(generics.CreateAPIView):
-    permission_classes = (permissions.AllowAny,)
-    serializer_class = CustomUserSerializer
+class RegisterView(APIView):
+    queryset = User.objects.all()
 
-
-class UserAuthenticationAPIView(APIView):
-    permission_classes = (permissions.AllowAny,)
-    serializer_class = CustomUserLoginSerializer
-
-    @extend_schema(tags=["Authentication"])
     def post(self, request):
-        username = request.data.get('username')
-        password = request.data.get('password')
-        user = authenticate(username=username, password=password)
-        if user:
-            login(request, user)
-            serializer = CustomUserLoginSerializer(user)
-            return Response({'status': 'success', 'result': serializer.data})
-        else:
-            return Response({'status': 'fail', 'error': 'Неверные данные', 'result': None})
+        serializer = UserSerializers(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        user = serializer.save()
 
+        refresh = RefreshToken.for_user(user)
+        access_token = str(refresh.access_token)
 
+        response = Response()
+        response.data = {'access_token': access_token}
+        return response
+
+@extend_schema(tags=["Authentication"])
+class LoginView(APIView):
+    queryset = User.objects.all()
+
+    def post(self, request):
+        email = request.data['email']
+        password = request.data['password']
+
+        user = User.objects.filter(email=email).first()
+        if user is None:
+            raise Http404("User not found!")
+        if not user.check_password(password):
+            raise AuthenticationFailed("Incorrect password")
+
+        refresh = RefreshToken.for_user(user)
+        access_token = str(refresh.access_token)
+
+        response = Response()
+        response.data = {'access_token': access_token}
+        return response
+
+@extend_schema(tags=["Authentication"])
+class UserView(APIView):
+    queryset = User.objects.all()
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        serializer = UserSerializers(request.user)
+        return Response(serializer.data)
+
+@extend_schema(tags=["Authentication"])
 class LogoutView(APIView):
-    permission_classes = [permissions.IsAuthenticated]
+    queryset = User.objects.all()
+    permission_classes = [IsAuthenticated]
 
-
-    @extend_schema(tags=["Authentication"])
     def post(self, request):
-        logout(request)
-        return Response({"status": "success", "message": "Пользователь успешно вышел из аккаунта"})
+        refresh_token = request.data.get('refresh_token')
+
+        if not refresh_token:
+            raise AuthenticationFailed('Refresh token is required for logout.')
+
+        try:
+            token = RefreshToken(refresh_token)
+            token.blacklist()
+        except Exception:
+            raise AuthenticationFailed('Invalid refresh token.')
+
+        response = Response({'detail': 'Logout successful.'})
+        return response
 
 
 class UserDetail(generics.GenericAPIView):
-    serializer_class = CustomUserSerializer
-    queryset = CustomUser.objects.all()
-
+    serializer_class = UserSerializers
+    queryset = User.objects.all()
 
     @extend_schema(tags=["Authentication"])
     def get_user(self, user_id):
         try:
-            return CustomUser.objects.get(id=user_id)
+            return User.objects.get(id=user_id)
         except:
             return None
-
 
     @extend_schema(tags=["Authentication"])
     def get(self, request, user_id):
@@ -66,3 +99,5 @@ class UserDetail(generics.GenericAPIView):
 
         serializer = self.serializer_class(user)
         return Response({"status": "success", "data": {"user": serializer.data}})
+
+

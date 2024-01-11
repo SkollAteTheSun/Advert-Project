@@ -14,9 +14,6 @@ class Categories(generics.GenericAPIView):
 
     @extend_schema(tags=["Category"])
     def get(self, request):
-        """
-        Получение записей Category
-        """
 
         name_param = request.GET.get('name')
 
@@ -34,9 +31,7 @@ class Categories(generics.GenericAPIView):
 
     @extend_schema(tags=["Category"])
     def post(self, request):
-        """
-        Добавление записи Category
-        """
+
         serializer = self.serializer_class(data=request.data)
 
         if not request.user.is_superuser:
@@ -64,9 +59,7 @@ class CategoryDetail(generics.GenericAPIView):
 
     @extend_schema(tags=["Category"])
     def get(self, request, category_id):
-        """
-        Получение записи Category
-        """
+
         category = self.get_category(category_id)
         if category is None:
             return Response({"status": "fail", "message": f"Категория с id: {category_id} не найдена"},
@@ -78,9 +71,7 @@ class CategoryDetail(generics.GenericAPIView):
 
     @extend_schema(tags=["Category"])
     def patch(self, request, category_id):
-        """
-        Обновление записи Category
-        """
+
         category = self.get_category(category_id)
         if category is None:
             return Response({"status": "fail", "message": f"Категория с id: {category_id} не найдена"},
@@ -101,9 +92,7 @@ class CategoryDetail(generics.GenericAPIView):
 
     @extend_schema(tags=["Category"])
     def delete(self, request, category_id):
-        """
-        Удаление записи Category
-        """
+
         category = self.get_category(category_id)
         if category is None:
             return Response({"status": "fail", "message": f"Категория с id: {category_id} не найдена"},
@@ -122,9 +111,6 @@ class Adverts(generics.GenericAPIView):
 
     @extend_schema(tags=["Advert"])
     def get(self, request):
-        """
-        Получение записей Advert
-        """
 
         name_param = request.GET.get('name')
 
@@ -147,9 +133,6 @@ class Adverts(generics.GenericAPIView):
 
     @extend_schema(tags=["Advert"])
     def post(self, request):
-        """
-        Добавление записи Advert
-        """
 
         if not request.user.is_authenticated:
             return Response({"status": "fail", "message": "Войдите в аккаунт"}, status=status.HTTP_400_BAD_REQUEST)
@@ -177,9 +160,7 @@ class AdvertDetail(generics.GenericAPIView):
 
     @extend_schema(tags=["Advert"])
     def get(self, request, advert_id):
-        """
-        Получение записи Advert
-        """
+
         advert = self.get_advert(advert_id)
         if advert is None:
             return Response({"status": "fail", "message": f"Объявление с id: {advert_id} не найдено"},
@@ -191,9 +172,7 @@ class AdvertDetail(generics.GenericAPIView):
 
     @extend_schema(tags=["Advert"])
     def patch(self, request, advert_id):
-        """
-        Обновление записи Advert
-        """
+
         advert = self.get_advert(advert_id)
         if advert is None:
             return Response({"status": "fail", "message": f"Объявление с id: {advert_id} не найдено"},
@@ -214,9 +193,7 @@ class AdvertDetail(generics.GenericAPIView):
 
     @extend_schema(tags=["Advert"])
     def delete(self, request, advert_id):
-        """
-        Удаление записи Advert
-        """
+
         advert = self.get_advert(advert_id)
         if advert is None:
             return Response({"status": "fail", "message": f"Объявление с id: {advert_id} не найдено"},
@@ -236,9 +213,6 @@ class Proposals(generics.GenericAPIView):
 
     @extend_schema(tags=["Proposal"])
     def get(self, request):
-        """
-        Получение записей Proposal
-        """
 
         proposals = Proposal.objects.all()
 
@@ -252,9 +226,6 @@ class Proposals(generics.GenericAPIView):
 
     @extend_schema(tags=["Proposal"])
     def post(self, request):
-        """
-        Добавление записи Proposal
-        """
 
         if not request.user.is_authenticated:
             return Response({"status": "fail", "message": "Войдите в аккаунт"}, status=status.HTTP_400_BAD_REQUEST)
@@ -288,9 +259,7 @@ class ProposalDetail(generics.GenericAPIView):
 
     @extend_schema(tags=["Proposal"])
     def get(self, request, proposal_id):
-        """
-        Получение записи Proposal
-        """
+
         proposal = self.get_proposal(proposal_id)
         if proposal is None:
             return Response({"status": "fail", "message": f"Заявка с id: {proposal_id} не найдена"},
@@ -302,9 +271,7 @@ class ProposalDetail(generics.GenericAPIView):
 
     @extend_schema(tags=["Proposal"])
     def patch(self, request, proposal_id):
-        """
-        Обновление записи Proposal
-        """
+
         proposal = self.get_proposal(proposal_id)
         if proposal is None:
             return Response({"status": "fail", "message": f"Заявка с id: {proposal_id} не найдена"},
@@ -325,9 +292,7 @@ class ProposalDetail(generics.GenericAPIView):
 
     @extend_schema(tags=["Proposal"])
     def delete(self, request, proposal_id):
-        """
-        Удаление записи Proposal
-        """
+
         proposal = self.get_proposal(proposal_id)
         if proposal is None:
             return Response({"status": "fail", "message": f"Заявка с id: {proposal_id} не найдена"},

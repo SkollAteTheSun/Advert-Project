@@ -32,7 +32,6 @@ INSTALLED_APPS = [
     'api',
 ]
 
-AUTH_USER_MODEL = 'authentication.CustomUser'
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
@@ -130,9 +129,9 @@ DATABASES = {
          'ENGINE': 'django.db.backends.postgresql',
          'USER': 'postgres',
          'PASSWORD':'root',
-         'NAME': 'dbAdvert',
+         'NAME': 'new',
          'PORT': '5432',
-         'HOST': 'db',
+         'HOST': 'localhost',
      }
 }
 

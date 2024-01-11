@@ -174,3 +174,7 @@ LINE 1: ...ession_data", "django_session"."expire_date" FROM "django_se...
 2023-11-29 09:11:35,041 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2023-11-29 09:13:34,053 django.request WARNING  Not Found: /
 2023-11-29 09:13:34,182 django.request WARNING  Not Found: /favicon.ico
+2024-01-11 17:49:12,085 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-11 17:49:14,163 django.request WARNING  Not Found: /
+2024-01-11 17:51:35,770 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-11 17:51:37,254 django.request WARNING  Not Found: /
