@@ -178,3 +178,77 @@ LINE 1: ...ession_data", "django_session"."expire_date" FROM "django_se...
 2024-01-11 17:49:14,163 django.request WARNING  Not Found: /
 2024-01-11 17:51:35,770 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2024-01-11 17:51:37,254 django.request WARNING  Not Found: /
+2024-01-14 19:12:53,862 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-14 19:12:56,059 django.request WARNING  Not Found: /
+2024-01-14 19:12:56,136 django.request WARNING  Not Found: /favicon.ico
+2024-01-14 19:15:16,683 PIL.Image    DEBUG    Importing BlpImagePlugin
+2024-01-14 19:15:16,683 PIL.Image    DEBUG    Importing BmpImagePlugin
+2024-01-14 19:15:16,683 PIL.Image    DEBUG    Importing BufrStubImagePlugin
+2024-01-14 19:15:16,683 PIL.Image    DEBUG    Importing CurImagePlugin
+2024-01-14 19:15:16,683 PIL.Image    DEBUG    Importing DcxImagePlugin
+2024-01-14 19:15:16,683 PIL.Image    DEBUG    Importing DdsImagePlugin
+2024-01-14 19:15:16,683 PIL.Image    DEBUG    Importing EpsImagePlugin
+2024-01-14 19:15:16,699 PIL.Image    DEBUG    Importing FitsImagePlugin
+2024-01-14 19:15:16,699 PIL.Image    DEBUG    Importing FliImagePlugin
+2024-01-14 19:15:16,699 PIL.Image    DEBUG    Importing FpxImagePlugin
+2024-01-14 19:15:16,699 PIL.Image    DEBUG    Image: failed to import FpxImagePlugin: No module named 'olefile'
+2024-01-14 19:15:16,699 PIL.Image    DEBUG    Importing FtexImagePlugin
+2024-01-14 19:15:16,699 PIL.Image    DEBUG    Importing GbrImagePlugin
+2024-01-14 19:15:16,699 PIL.Image    DEBUG    Importing GifImagePlugin
+2024-01-14 19:15:16,699 PIL.Image    DEBUG    Importing GribStubImagePlugin
+2024-01-14 19:15:16,699 PIL.Image    DEBUG    Importing Hdf5StubImagePlugin
+2024-01-14 19:15:16,699 PIL.Image    DEBUG    Importing IcnsImagePlugin
+2024-01-14 19:15:16,715 PIL.Image    DEBUG    Importing IcoImagePlugin
+2024-01-14 19:15:16,717 PIL.Image    DEBUG    Importing ImImagePlugin
+2024-01-14 19:15:16,717 PIL.Image    DEBUG    Importing ImtImagePlugin
+2024-01-14 19:15:16,717 PIL.Image    DEBUG    Importing IptcImagePlugin
+2024-01-14 19:15:16,717 PIL.Image    DEBUG    Importing JpegImagePlugin
+2024-01-14 19:15:16,717 PIL.Image    DEBUG    Importing Jpeg2KImagePlugin
+2024-01-14 19:15:16,717 PIL.Image    DEBUG    Importing McIdasImagePlugin
+2024-01-14 19:15:16,717 PIL.Image    DEBUG    Importing MicImagePlugin
+2024-01-14 19:15:16,717 PIL.Image    DEBUG    Image: failed to import MicImagePlugin: No module named 'olefile'
+2024-01-14 19:15:16,717 PIL.Image    DEBUG    Importing MpegImagePlugin
+2024-01-14 19:15:16,717 PIL.Image    DEBUG    Importing MpoImagePlugin
+2024-01-14 19:15:16,733 PIL.Image    DEBUG    Importing MspImagePlugin
+2024-01-14 19:15:16,733 PIL.Image    DEBUG    Importing PalmImagePlugin
+2024-01-14 19:15:16,733 PIL.Image    DEBUG    Importing PcdImagePlugin
+2024-01-14 19:15:16,733 PIL.Image    DEBUG    Importing PcxImagePlugin
+2024-01-14 19:15:16,733 PIL.Image    DEBUG    Importing PdfImagePlugin
+2024-01-14 19:15:16,749 PIL.Image    DEBUG    Importing PixarImagePlugin
+2024-01-14 19:15:16,750 PIL.Image    DEBUG    Importing PngImagePlugin
+2024-01-14 19:15:16,750 PIL.Image    DEBUG    Importing PpmImagePlugin
+2024-01-14 19:15:16,750 PIL.Image    DEBUG    Importing PsdImagePlugin
+2024-01-14 19:15:16,750 PIL.Image    DEBUG    Importing QoiImagePlugin
+2024-01-14 19:15:16,750 PIL.Image    DEBUG    Importing SgiImagePlugin
+2024-01-14 19:15:16,750 PIL.Image    DEBUG    Importing SpiderImagePlugin
+2024-01-14 19:15:16,750 PIL.Image    DEBUG    Importing SunImagePlugin
+2024-01-14 19:15:16,750 PIL.Image    DEBUG    Importing TgaImagePlugin
+2024-01-14 19:15:16,750 PIL.Image    DEBUG    Importing TiffImagePlugin
+2024-01-14 19:15:16,750 PIL.Image    DEBUG    Importing WebPImagePlugin
+2024-01-14 19:15:16,750 PIL.Image    DEBUG    Importing WmfImagePlugin
+2024-01-14 19:15:16,750 PIL.Image    DEBUG    Importing XbmImagePlugin
+2024-01-14 19:15:16,766 PIL.Image    DEBUG    Importing XpmImagePlugin
+2024-01-14 19:15:16,766 PIL.Image    DEBUG    Importing XVThumbImagePlugin
+2024-01-14 19:21:10,390 django.request WARNING  Not Found: /user/
+2024-01-14 19:21:18,013 django.request WARNING  Not Found: /user/registrations
+2024-01-14 19:21:27,205 django.request WARNING  Not Found: /api/user/registrations
+2024-01-14 19:21:58,358 django.request WARNING  Not Found: /api/user/register
+2024-01-14 19:22:09,759 django.request WARNING  Method Not Allowed: /api/users/register/
+2024-01-14 19:25:50,543 django.request WARNING  Bad Request: /api/users/register/
+2024-01-14 19:26:36,535 django.request WARNING  Not Found: /api/register
+2024-01-14 19:26:42,144 django.request WARNING  Method Not Allowed: /api/users/register/
+2024-01-14 19:26:56,384 django.request WARNING  Not Found: /api/register
+2024-01-14 19:27:01,206 django.request WARNING  Not Found: /api/register
+2024-01-14 19:27:04,973 django.request WARNING  Not Found: /api/register
+2024-01-14 19:27:06,488 django.request WARNING  Method Not Allowed: /api/users/register/
+2024-01-14 19:27:07,042 django.request WARNING  Method Not Allowed: /api/users/register/
+2024-01-14 19:27:07,201 django.request WARNING  Method Not Allowed: /api/users/register/
+2024-01-14 19:28:28,174 django.request WARNING  Bad Request: /api/users/register/
+2024-01-14 19:29:14,725 django.request WARNING  Bad Request: /api/users/register/
+2024-01-14 19:29:28,617 django.request WARNING  Method Not Allowed: /api/users/register/
+2024-01-14 19:29:30,367 django.request WARNING  Method Not Allowed: /api/users/register/
+2024-01-14 19:29:31,509 django.request WARNING  Method Not Allowed: /api/users/register/
+2024-01-14 19:29:31,686 django.request WARNING  Method Not Allowed: /api/users/register/
+2024-01-14 19:30:00,403 django.request WARNING  Method Not Allowed: /api/users/register/
+2024-01-14 19:30:01,198 django.request WARNING  Method Not Allowed: /api/users/register/
+2024-01-14 19:30:01,378 django.request WARNING  Method Not Allowed: /api/users/register/
