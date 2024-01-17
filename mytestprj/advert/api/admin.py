@@ -2,17 +2,15 @@ from django.contrib import admin
 
 from .models import *
 
-'''
-class CustomUserAdmin(User):
-    fieldsets = (
-        ('Personal info', {'fields': ('username', 'password', 'name', 'email', 'first_name', 'last_name', 'is_active', 'is_staff', 'is_superuser', 'last_login', 'date_joined')}),
-    )
+class AdvertCategoryInline(admin.StackedInline):
+    model = AdvertCategory
+    extra = 1
+
+class AdvertAdmin(admin.ModelAdmin):
+    inlines = [AdvertCategoryInline]
 
 
-
-admin.site.register(CustomUserAdmin)
-'''
 admin.site.register(Category)
 admin.site.register(AdvertCategory)
-admin.site.register(Advert)
+admin.site.register(Advert, AdvertAdmin)
 admin.site.register(Proposal)

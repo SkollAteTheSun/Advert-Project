@@ -16,7 +16,7 @@ class Category(models.Model):
 class Advert(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='adverts', verbose_name="Автор объявления")
-    category = models.ManyToManyField(Category, through='AdvertCategory', related_name='adverts', verbose_name="Категории")
+    categories = models.ManyToManyField(Category, through='AdvertCategory', related_name='adverts', verbose_name="Категории")
     name = models.CharField(max_length=60, verbose_name="Название объявления")
     description = models.TextField(verbose_name="Описание")
     photo = models.ImageField(upload_to='avatars', verbose_name="Фото вещи")
@@ -39,6 +39,7 @@ class AdvertCategory(models.Model):
     class Meta:
         verbose_name = 'Категория объявления'
         verbose_name_plural = 'Категории объявлений'
+        unique_together = ('advert', 'category', 'is_main')
 
 
 class Proposal(models.Model):

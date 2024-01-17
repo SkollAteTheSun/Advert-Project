@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4cd5e1fa-be17-46ab-80a4-c71d402ab1c0" name="Changes" comment="many to many">
+      <change beforePath="$PROJECT_DIR$/mytestprj/advert/api/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mytestprj/advert/api/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytestprj/advert/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mytestprj/advert/api/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytestprj/advert/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/mytestprj/advert/debug.log" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2anaRc9wLbl9Ej9j54w2915Ugyi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Nick/Desktop/git/Advert-Project"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4cd5e1fa-be17-46ab-80a4-c71d402ab1c0" name="Changes" comment="" />
+      <created>1704956789431</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704956789431</updated>
+      <workItem from="1704956791520" duration="1890000" />
+      <workItem from="1704978783392" duration="6831000" />
+      <workItem from="1705247602487" duration="3271000" />
+      <workItem from="1705251325744" duration="490000" />
+      <workItem from="1705303672630" duration="590000" />
+      <workItem from="1705304284082" duration="628000" />
+      <workItem from="1705325454477" duration="2872000" />
+      <workItem from="1705331907697" duration="531000" />
+      <workItem from="1705393863273" duration="9529000" />
+      <workItem from="1705484419805" duration="2725000" />
+    </task>
+    <task id="LOCAL-00001" summary="Update models">
+      <created>1704958612019</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704958612019</updated>
+    </task>
+    <task id="LOCAL-00002" summary="authentication + models">
+      <created>1704986175866</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704986175866</updated>
+    </task>
+    <task id="LOCAL-00003" summary="migration">
+      <created>1705251272934</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705251272934</updated>
+    </task>
+    <task id="LOCAL-00004" summary="migration">
+      <created>1705251540967</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705251540967</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ignore">
+      <created>1705304074090</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705304074090</updated>
+    </task>
+    <task id="LOCAL-00006" summary="many to many">
+      <created>1705409720770</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705409720770</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update models" />
+    <MESSAGE value="authentication + models" />
+    <MESSAGE value="migration" />
+    <MESSAGE value="ignore" />
+    <MESSAGE value="many to many" />
+    <option name="LAST_COMMIT_MESSAGE" value="many to many" />
+  </component>
+</project>
