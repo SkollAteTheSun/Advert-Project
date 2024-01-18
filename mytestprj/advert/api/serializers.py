@@ -13,7 +13,7 @@ class AdvertSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Advert
-        fields = ['user', 'category', 'name', 'description', 'photo']
+        fields = ['user', 'categories' , 'name', 'description', 'photo', 'published']
 
 
 class ProposalSerializer(serializers.ModelSerializer):

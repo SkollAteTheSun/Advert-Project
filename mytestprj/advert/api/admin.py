@@ -8,6 +8,17 @@ class AdvertCategoryInline(admin.StackedInline):
 
 class AdvertAdmin(admin.ModelAdmin):
     inlines = [AdvertCategoryInline]
+    actions = ['publish_adverts', 'hide_adverts']
+
+    def publish_adverts(modeladmin, request, queryset):
+        queryset.update(published=True)
+
+    publish_adverts.short_description = "Опубликовать выбранные объявления"
+
+    def hide_adverts(modeladmin, request, queryset):
+        queryset.update(published=False)
+
+    hide_adverts.short_description = "Скрыть выбранные объявления"
 
 
 admin.site.register(Category)

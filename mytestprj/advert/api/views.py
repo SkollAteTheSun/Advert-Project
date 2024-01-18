@@ -12,7 +12,7 @@ class Categories(generics.GenericAPIView):
     queryset = Category.objects.all()
 
 
-    @extend_schema(tags=["Category"])
+    @extend_schema(tags=["Categories"])
     def get(self, request):
 
         name_param = request.GET.get('name')
@@ -29,7 +29,7 @@ class Categories(generics.GenericAPIView):
         })
 
 
-    @extend_schema(tags=["Category"])
+    @extend_schema(tags=["Categories"])
     def post(self, request):
 
         serializer = self.serializer_class(data=request.data)
@@ -40,7 +40,7 @@ class Categories(generics.GenericAPIView):
 
         if serializer.is_valid():
             serializer.save()
-            return Response({"status": "success", "data": {"category": serializer.data}}, status=status.HTTP_201_CREATED)
+            return Response({"status": "success", "data": {"categories": serializer.data}}, status=status.HTTP_201_CREATED)
         else:
             return Response({"status": "fail", "message": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
@@ -49,7 +49,7 @@ class CategoryDetail(generics.GenericAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
-    @extend_schema(tags=["Category"])
+    @extend_schema(tags=["Categories"])
     def get_category(self, category_id):
         try:
             category = Category.objects.get(id=category_id)
@@ -57,19 +57,19 @@ class CategoryDetail(generics.GenericAPIView):
         except:
             return None
 
-    @extend_schema(tags=["Category"])
-    def get(self, request, category_id):
+    @extend_schema(tags=["Categories"])
+    def get(self, request, categories_id):
 
-        category = self.get_category(category_id)
-        if category is None:
-            return Response({"status": "fail", "message": f"Категория с id: {category_id} не найдена"},
+        categories = self.get_category(categories_id)
+        if categories is None:
+            return Response({"status": "fail", "message": f"Категория с id: {categories_id} не найдена"},
                             status=status.HTTP_404_NOT_FOUND)
 
-        serializer = self.serializer_class(category)
-        return Response({"status": "success", "data": {"category": serializer.data}})
+        serializer = self.serializer_class(categories)
+        return Response({"status": "success", "data": {"categories": serializer.data}})
 
 
-    @extend_schema(tags=["Category"])
+    @extend_schema(tags=["Categories"])
     def patch(self, request, category_id):
 
         category = self.get_category(category_id)
@@ -114,7 +114,7 @@ class Adverts(generics.GenericAPIView):
 
         name_param = request.GET.get('name')
 
-        category_param = request.GET.get('category')
+        category_param = request.GET.get('categories')
 
         adverts = Advert.objects.all()
 
@@ -122,7 +122,7 @@ class Adverts(generics.GenericAPIView):
             adverts = adverts.filter(name__icontains=name_param)
 
         if category_param:
-            adverts = adverts.filter(category=category_param)
+            adverts = adverts.filter(categories=category_param)
 
         serializer = self.serializer_class(adverts, many=True)
 
