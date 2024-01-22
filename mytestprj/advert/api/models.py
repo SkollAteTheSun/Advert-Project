@@ -13,6 +13,10 @@ class Category(models.Model):
         verbose_name_plural = 'Категории'
 
 
+class PublishedAdvertManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(published=True)
+
 class Advert(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='adverts', verbose_name="Автор объявления")
     categories = models.ManyToManyField(Category, through='AdvertCategory', related_name='adverts', verbose_name="Категории")
@@ -20,6 +24,9 @@ class Advert(models.Model):
     description = models.TextField(verbose_name="Описание")
     photo = models.ImageField(upload_to='avatars', verbose_name="Фото вещи")
     published = models.BooleanField(default=True, verbose_name="Опубликовано")
+
+    objects = models.Manager()
+    published_objects = PublishedAdvertManager()
 
     def __str__(self):
         return str(self.name)
@@ -56,3 +63,4 @@ class Proposal(models.Model):
     class Meta:
         verbose_name = 'Заявка'
         verbose_name_plural = 'Заявки'
+

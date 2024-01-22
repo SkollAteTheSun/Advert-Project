@@ -12,7 +12,7 @@ class Categories(generics.GenericAPIView):
     queryset = Category.objects.all()
 
 
-    @extend_schema(tags=["Categories"])
+    @extend_schema(tags=["Category"])
     def get(self, request):
 
         name_param = request.GET.get('name')
@@ -29,7 +29,7 @@ class Categories(generics.GenericAPIView):
         })
 
 
-    @extend_schema(tags=["Categories"])
+    @extend_schema(tags=["Category"])
     def post(self, request):
 
         serializer = self.serializer_class(data=request.data)
@@ -49,7 +49,7 @@ class CategoryDetail(generics.GenericAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
-    @extend_schema(tags=["Categories"])
+    @extend_schema(tags=["Category"])
     def get_category(self, category_id):
         try:
             category = Category.objects.get(id=category_id)
@@ -57,7 +57,7 @@ class CategoryDetail(generics.GenericAPIView):
         except:
             return None
 
-    @extend_schema(tags=["Categories"])
+    @extend_schema(tags=["Category"])
     def get(self, request, categories_id):
 
         categories = self.get_category(categories_id)
@@ -69,7 +69,7 @@ class CategoryDetail(generics.GenericAPIView):
         return Response({"status": "success", "data": {"categories": serializer.data}})
 
 
-    @extend_schema(tags=["Categories"])
+    @extend_schema(tags=["Category"])
     def patch(self, request, category_id):
 
         category = self.get_category(category_id)
@@ -116,7 +116,7 @@ class Adverts(generics.GenericAPIView):
 
         category_param = request.GET.get('categories')
 
-        adverts = Advert.objects.all()
+        adverts = Advert.published_objects.all()
 
         if name_param:
             adverts = adverts.filter(name__icontains=name_param)
@@ -342,7 +342,6 @@ class AdvertProposalsAPIView(APIView):
     def get(self, request, advert_id):
 
         proposals = Proposal.objects.filter(advert=advert_id)
-
         serializer = self.serializer_class(proposals, many=True)
 
         return Response({

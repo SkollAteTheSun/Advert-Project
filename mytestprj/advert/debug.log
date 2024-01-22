@@ -802,3 +802,781 @@ django.core.exceptions.ImproperlyConfigured: Field name `category` is not valid 
 2024-01-18 16:42:38,049 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\serializers.py changed, reloading.
 2024-01-18 16:42:38,981 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2024-01-18 16:42:40,279 django.request WARNING  Not Found: /favicon.ico
+2024-01-21 17:22:06,286 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-21 17:22:07,878 django.request WARNING  Not Found: /
+2024-01-21 17:22:07,968 django.request WARNING  Not Found: /favicon.ico
+2024-01-21 17:49:32,380 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-21 17:49:33,667 django.request WARNING  Not Found: /
+2024-01-21 17:50:09,890 django.request WARNING  Not Found: /api/admin/
+2024-01-21 17:54:01,471 django.request WARNING  Not Found: /api/
+2024-01-21 17:54:02,628 django.request ERROR    Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\utils.py", line 422, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 98, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1355, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1411, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1585, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 914, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1006, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'advert_info' was declared on serializer ProposalSerializer, but has not been included in the 'fields' option.
+2024-01-21 17:54:02,713 django.request ERROR    Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\utils.py", line 422, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 98, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1355, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1411, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1585, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 914, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1006, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'advert_info' was declared on serializer ProposalSerializer, but has not been included in the 'fields' option.
+2024-01-21 17:54:08,808 django.request ERROR    Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\utils.py", line 422, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 98, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1355, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1411, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1585, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 914, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1006, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'advert_info' was declared on serializer ProposalSerializer, but has not been included in the 'fields' option.
+2024-01-21 17:54:08,911 django.request ERROR    Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\utils.py", line 422, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 98, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1355, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1411, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1585, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 914, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1006, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'advert_info' was declared on serializer ProposalSerializer, but has not been included in the 'fields' option.
+2024-01-21 17:54:10,141 django.request ERROR    Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\utils.py", line 422, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 98, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1355, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1411, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1585, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 914, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1006, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'advert_info' was declared on serializer ProposalSerializer, but has not been included in the 'fields' option.
+2024-01-21 17:54:12,556 django.request ERROR    Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\utils.py", line 422, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 98, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1355, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1411, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1585, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 914, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1006, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'advert_info' was declared on serializer ProposalSerializer, but has not been included in the 'fields' option.
+2024-01-21 17:54:16,086 django.request ERROR    Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\utils.py", line 422, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 98, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1355, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1411, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1585, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 914, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1006, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'advert_info' was declared on serializer ProposalSerializer, but has not been included in the 'fields' option.
+2024-01-21 17:54:16,201 django.request ERROR    Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\utils.py", line 422, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 98, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1355, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1411, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1585, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 914, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1006, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'advert_info' was declared on serializer ProposalSerializer, but has not been included in the 'fields' option.
+2024-01-21 17:54:21,647 django.request ERROR    Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\utils.py", line 422, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 98, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1355, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1411, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1585, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 914, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1006, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'advert_info' was declared on serializer ProposalSerializer, but has not been included in the 'fields' option.
+2024-01-21 17:54:21,730 django.request ERROR    Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\utils.py", line 422, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 98, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1355, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1411, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1585, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 914, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1006, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'advert_info' was declared on serializer ProposalSerializer, but has not been included in the 'fields' option.
+2024-01-21 17:54:33,437 django.request WARNING  Not Found: /api/
+2024-01-21 17:55:28,117 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-21 17:55:28,632 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-21 17:55:30,140 django.request WARNING  Not Found: /
+2024-01-21 17:55:43,370 django.request ERROR    Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\utils.py", line 422, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 98, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1355, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1411, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1585, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 914, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1006, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'advert_info' was declared on serializer ProposalSerializer, but has not been included in the 'fields' option.
+2024-01-21 17:55:43,464 django.request ERROR    Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\utils.py", line 422, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 98, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1355, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1411, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1585, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 914, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1006, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'advert_info' was declared on serializer ProposalSerializer, but has not been included in the 'fields' option.
+2024-01-21 17:55:45,194 django.request ERROR    Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\utils.py", line 422, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 98, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1355, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1411, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1585, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 914, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1006, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'advert_info' was declared on serializer ProposalSerializer, but has not been included in the 'fields' option.
+2024-01-21 17:55:45,298 django.request ERROR    Internal Server Error: /api/schema/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 83, in get
+    return self._get_schema_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\views.py", line 91, in _get_schema_response
+    data=generator.get_schema(request=request, public=self.serve_public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 268, in get_schema
+    paths=self.parse(request, public),
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\generators.py", line 239, in parse
+    operation = view.schema.get_operation(
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\utils.py", line 422, in get_operation
+    return super().get_operation(path, path_regex, path_prefix, method, registry)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 98, in get_operation
+    operation['responses'] = self._get_response_bodies()
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1355, in _get_response_bodies
+    return {'200': self._get_response_for_code(response_serializers, '200', direction=direction)}
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1411, in _get_response_for_code
+    component = self.resolve_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1585, in resolve_serializer
+    component.schema = self._map_serializer(serializer, direction, bypass_extensions)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 914, in _map_serializer
+    schema = self._map_basic_serializer(serializer, direction)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\drf_spectacular\openapi.py", line 1006, in _map_basic_serializer
+    for field in serializer.fields.values():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'advert_info' was declared on serializer ProposalSerializer, but has not been included in the 'fields' option.
+2024-01-21 17:56:58,839 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\serializers.py changed, reloading.
+2024-01-21 17:56:59,340 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-21 17:57:01,296 django.request WARNING  Not Found: /
+2024-01-21 17:57:32,556 django.request ERROR    Internal Server Error: /api/content/proposals/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py", line 223, in get
+    "proposals": serializer.data
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\fields.py", line 1838, in to_representation
+    return method(value)
+  File "C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\serializers.py", line 17, in get_advert_info
+    return get_advert_info(obj.advert)
+  File "C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\serializers.py", line 25, in get_advert_info
+    'num_proposals': Proposal.objects.filter(advert=obj.advert).count(),
+AttributeError: 'Advert' object has no attribute 'advert'
+2024-01-21 17:57:59,519 django.request WARNING  Not Found: /api/content/category
+2024-01-21 17:58:12,807 django.request ERROR    Internal Server Error: /api/content/proposals/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py", line 223, in get
+    "proposals": serializer.data
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\serializers.py", line 522, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\fields.py", line 1838, in to_representation
+    return method(value)
+  File "C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\serializers.py", line 17, in get_advert_info
+    return get_advert_info(obj.advert)
+  File "C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\serializers.py", line 25, in get_advert_info
+    'num_proposals': Proposal.objects.filter(advert=obj.advert).count(),
+AttributeError: 'Advert' object has no attribute 'advert'
+2024-01-21 18:02:08,847 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\serializers.py changed, reloading.
+2024-01-21 18:02:09,367 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-21 18:02:26,546 django.request WARNING  Not Found: /
