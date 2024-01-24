@@ -1580,3 +1580,393 @@ AttributeError: 'Advert' object has no attribute 'advert'
 2024-01-21 18:02:08,847 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\serializers.py changed, reloading.
 2024-01-21 18:02:09,367 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2024-01-21 18:02:26,546 django.request WARNING  Not Found: /
+2024-01-22 13:30:47,686 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 13:30:51,332 django.request WARNING  Not Found: /
+2024-01-22 13:30:51,409 django.request WARNING  Not Found: /favicon.ico
+2024-01-22 13:31:08,559 django.request WARNING  Not Found: /api/content/proposal/
+2024-01-22 13:48:48,601 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 13:48:57,380 django.request WARNING  Not Found: /
+2024-01-22 13:49:07,569 django.request ERROR    Internal Server Error: /api/content/adverts/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py", line 120, in get
+    adverts = Advert.objects.published()
+AttributeError: 'Manager' object has no attribute 'published'
+2024-01-22 13:49:12,720 django.request ERROR    Internal Server Error: /api/content/adverts/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py", line 120, in get
+    adverts = Advert.objects.published()
+AttributeError: 'Manager' object has no attribute 'published'
+2024-01-22 13:51:44,922 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-22 13:51:45,482 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 14:04:11,167 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\models.py changed, reloading.
+2024-01-22 14:04:11,689 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 14:04:13,440 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-22 14:04:13,989 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 14:05:11,578 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-22 14:05:12,061 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 14:05:49,469 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-22 14:05:49,956 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 14:06:40,036 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\models.py changed, reloading.
+2024-01-22 14:06:40,498 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 14:06:57,703 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-22 14:06:58,161 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 14:06:59,935 django.request WARNING  Not Found: /
+2024-01-22 17:24:25,624 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 17:28:13,376 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\urls.py changed, reloading.
+2024-01-22 17:28:14,351 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 17:28:19,330 django.request WARNING  Not Found: /
+2024-01-22 17:28:19,456 django.request WARNING  Not Found: /favicon.ico
+2024-01-22 17:28:47,361 django.request ERROR    Internal Server Error: /api/content/adverts/import-csv/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: Adverts.get() got an unexpected keyword argument 'post'
+2024-01-22 17:33:52,039 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\urls.py changed, reloading.
+2024-01-22 17:33:53,074 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 17:33:55,377 django.request WARNING  Not Found: /
+2024-01-22 17:34:50,388 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\urls.py changed, reloading.
+2024-01-22 17:34:51,401 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 17:34:52,744 django.request ERROR    Internal Server Error: /api/content/adverts/import-csv/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: Adverts.get() got an unexpected keyword argument 'post'
+2024-01-22 17:36:23,459 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\urls.py changed, reloading.
+2024-01-22 17:36:24,414 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 17:38:22,502 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\urls.py changed, reloading.
+2024-01-22 17:38:23,612 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 17:38:24,494 django.request ERROR    Internal Server Error: /api/content/adverts/import-csv/
+Traceback (most recent call last):
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\decorators\csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Nick\AppData\Local\Programs\Python\Python310\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: Adverts.get() got an unexpected keyword argument 'post'
+2024-01-22 17:40:16,391 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\urls.py changed, reloading.
+2024-01-22 17:40:17,303 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 18:10:07,338 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\urls.py changed, reloading.
+2024-01-22 18:10:07,795 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 18:10:10,909 django.request WARNING  Not Found: /
+2024-01-22 18:17:14,310 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-22 18:17:14,787 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 18:17:36,010 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-22 18:17:36,466 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 18:18:55,825 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 18:32:32,613 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 18:32:37,379 django.request WARNING  Not Found: /
+2024-01-22 18:39:45,365 django.request WARNING  Not Found: /api/content/adverts/import-csv/ C:/Users/Nick/Desktop/info.csv
+2024-01-22 18:42:16,557 django.request WARNING  Not Found: /api/content/adverts/import-csv/ C:/Users/Nick/Desktop/info.csv
+2024-01-22 18:50:12,232 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-22 18:50:12,702 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 18:50:15,217 django.request WARNING  Not Found: /
+2024-01-22 19:07:21,977 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-22 19:07:22,447 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 19:08:45,559 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 19:08:47,614 django.request WARNING  Not Found: /
+2024-01-22 19:09:28,108 django.request WARNING  Bad Request: /api/content/adverts/
+2024-01-22 19:10:06,531 django.request WARNING  Bad Request: /api/content/adverts/
+2024-01-22 19:10:51,063 django.request WARNING  Bad Request: /api/content/adverts/
+2024-01-22 19:11:57,741 django.request WARNING  Bad Request: /api/content/adverts/
+2024-01-22 19:12:48,496 django.request WARNING  Bad Request: /api/content/adverts/
+2024-01-22 19:21:51,117 django.request WARNING  Bad Request: /api/content/adverts/import-csv/
+2024-01-22 19:23:25,805 django.request WARNING  Bad Request: /api/content/adverts/import-csv/
+2024-01-22 19:32:10,383 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-22 19:32:10,905 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 19:32:33,553 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-22 19:32:34,065 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 19:33:14,529 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-22 19:33:15,050 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 19:33:40,374 root         ERROR    Error while importing advert from CSV: type object 'Advert' has no attribute 'create_from_csv'
+2024-01-22 19:34:16,477 root         ERROR    Error while importing advert from CSV: type object 'Advert' has no attribute 'create_from_csv'
+2024-01-22 19:43:37,256 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-22 19:43:37,778 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 19:43:43,731 django.request WARNING  Not Found: /
+2024-01-22 19:43:56,818 root         ERROR    Error while importing advert from CSV: expected str, bytes or os.PathLike object, not NoneType
+2024-01-22 19:44:15,425 root         ERROR    Error while importing advert from CSV: expected str, bytes or os.PathLike object, not NoneType
+2024-01-22 19:46:45,114 root         ERROR    Error while importing advert from CSV: expected str, bytes or os.PathLike object, not NoneType
+2024-01-22 19:48:55,701 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\serializers.py changed, reloading.
+2024-01-22 19:48:56,171 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 19:49:04,179 root         ERROR    Error while importing advert from CSV: ['“true” value must be either True or False.']
+2024-01-22 19:50:27,542 root         ERROR    Error while importing advert from CSV: [Errno 2] No such file or directory: '/media/avatars/boocover_ocX3NpT.jpg'
+2024-01-22 19:52:27,267 root         ERROR    Error while importing advert from CSV: [WinError 123] Синтаксическая ошибка в имени файла, имени папки или метке тома: 'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\media\\avatars\\C:'
+2024-01-22 19:53:43,647 root         ERROR    Error while importing advert from CSV: [Errno 2] No such file or directory: 'boocover.jpg'
+2024-01-22 19:54:14,517 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\serializers.py changed, reloading.
+2024-01-22 19:54:15,000 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 19:54:20,183 root         ERROR    Error while importing advert from CSV: [Errno 2] No such file or directory: 'boocover.jpg'
+2024-01-22 19:55:38,094 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\serializers.py changed, reloading.
+2024-01-22 19:55:38,557 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 19:55:42,444 root         ERROR    Error while importing advert from CSV: [Errno 2] No such file or directory: 'boocover.jpg'
+2024-01-22 19:56:11,732 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\serializers.py changed, reloading.
+2024-01-22 19:56:12,193 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 19:56:15,638 root         ERROR    Error while importing advert from CSV: [Errno 2] No such file or directory: 'boocover.jpg'
+2024-01-22 19:57:22,559 root         ERROR    Error while importing advert from CSV: [WinError 123] Синтаксическая ошибка в имени файла, имени папки или метке тома: 'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\media\\avatars\\C:'
+2024-01-22 20:01:20,816 root         ERROR    Error while importing advert from CSV: [WinError 123] Синтаксическая ошибка в имени файла, имени папки или метке тома: 'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\media\\avatars\\C:'
+2024-01-22 20:02:03,010 root         ERROR    Error while importing advert from CSV: [WinError 123] Синтаксическая ошибка в имени файла, имени папки или метке тома: 'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\media\\avatars\\C:'
+2024-01-22 20:03:02,250 root         ERROR    Error during CSV import: 'utf-8' codec can't decode byte 0xc1 in position 77: invalid start byte
+2024-01-22 20:03:54,339 root         ERROR    Error while importing advert from CSV: [Errno 2] No such file or directory: '1.jpg'
+2024-01-22 20:06:22,481 root         ERROR    Error while importing advert from CSV: [WinError 123] Синтаксическая ошибка в имени файла, имени папки или метке тома: 'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\media\\avatars\\C:'
+2024-01-22 20:12:15,207 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\serializers.py changed, reloading.
+2024-01-22 20:12:15,703 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 20:12:27,833 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\serializers.py changed, reloading.
+2024-01-22 20:12:28,320 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 20:13:00,033 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-22 20:13:48,130 root         ERROR    Error while importing advert from CSV: [Errno 22] Invalid argument: "C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\r'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\media\\avatars\\1.jpg'"
+2024-01-22 20:14:44,837 root         ERROR    Error while importing advert from CSV: [Errno 2] No such file or directory: "C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\r'\\media\\avatars\\1.jpg'"
+2024-01-22 20:15:01,795 root         ERROR    Error while importing advert from CSV: [Errno 2] No such file or directory: 'C:\\media\\avatars\\1.jpg'
+2024-01-22 20:16:59,813 root         ERROR    Photo path: 
+2024-01-23 11:40:02,903 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 11:40:10,427 django.request WARNING  Not Found: /
+2024-01-23 11:40:10,543 django.request WARNING  Not Found: /favicon.ico
+2024-01-23 11:41:22,516 root         ERROR    Error while importing advert from CSV: [Errno 2] No such file or directory: 'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\cuba.png'
+2024-01-23 12:45:09,374 root         ERROR    Error while importing advert from CSV: [Errno 2] No such file or directory: 'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\cuba.png'
+2024-01-23 12:47:26,626 root         ERROR    Error while importing advert from CSV: [WinError 123] Синтаксическая ошибка в имени файла, имени папки или метке тома: 'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\media\\avatars\\C:'
+2024-01-23 12:49:31,090 root         ERROR    Error during CSV import: 'utf-8' codec can't decode byte 0xf1 in position 67: invalid continuation byte
+2024-01-23 12:50:00,646 root         ERROR    Error while importing advert from CSV: [WinError 123] Синтаксическая ошибка в имени файла, имени папки или метке тома: 'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\media\\avatars\\C:'
+2024-01-23 13:07:58,223 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 13:08:01,036 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 13:08:11,304 root         ERROR    Error while importing advert from CSV: [WinError 123] Синтаксическая ошибка в имени файла, имени папки или метке тома: 'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\media\\avatars\\C:'
+2024-01-23 13:09:45,014 root         ERROR    Error while importing advert from CSV: [WinError 123] Синтаксическая ошибка в имени файла, имени папки или метке тома: 'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\media\\avatars\\C:'
+2024-01-23 13:17:24,196 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 13:17:24,878 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 13:18:39,687 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 13:18:40,203 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 13:18:43,316 root         ERROR    Error while importing advert from CSV: [Errno 2] No such file or directory: 'media\\avatars\\cuba.jpg'
+2024-01-23 13:19:19,576 root         ERROR    Error while importing advert from CSV: Category matching query does not exist.
+2024-01-23 13:26:46,548 root         ERROR    Error during CSV import: 'utf-8' codec can't decode byte 0xf5 in position 65: invalid start byte
+2024-01-23 13:28:38,664 root         ERROR    Error while importing advert from CSV: Category matching query does not exist.
+2024-01-23 13:29:36,343 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 13:29:40,550 root         ERROR    Error while importing advert from CSV: Category matching query does not exist.
+2024-01-23 13:38:22,287 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 13:38:22,808 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 13:38:29,508 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 13:38:34,645 root         ERROR    Error while importing advert from CSV: ОШИБКА:  повторяющееся значение ключа нарушает ограничение уникальности "api_category_pkey"
+DETAIL:  Ключ "(id)=(4)" уже существует.
+
+2024-01-23 13:47:50,922 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 13:47:51,403 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 13:47:56,695 root         ERROR    Category with name another does not exist
+2024-01-23 13:55:17,682 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 13:55:22,423 root         ERROR    Category with name another does not exist
+2024-01-23 14:00:57,524 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 14:00:58,096 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 14:01:07,220 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 14:01:07,702 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 14:01:12,102 root         ERROR    Category with name another does not exist
+2024-01-23 14:07:50,010 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 14:07:50,517 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 14:08:00,063 root         ERROR    Category with name another does not exist
+2024-01-23 14:09:28,586 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 14:09:29,092 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 14:09:33,438 root         ERROR    Category with name another does not exist
+2024-01-23 14:23:25,546 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 14:23:26,223 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 14:24:50,525 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 14:24:51,027 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 14:24:57,757 root         ERROR    Category with name another does not exist
+2024-01-23 14:37:50,123 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 14:37:50,635 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 14:39:59,655 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 14:40:00,129 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 14:40:03,510 root         ERROR    Category with name another does not exist
+2024-01-23 14:40:24,657 root         ERROR    Category with name another does not exist
+2024-01-23 14:42:33,956 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 14:42:34,484 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 14:42:47,561 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 14:42:48,048 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 14:43:29,532 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 14:43:29,989 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 14:43:34,256 root         ERROR    Category with name another does not exist
+2024-01-23 14:44:41,025 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 14:44:41,501 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 14:44:46,219 root         ERROR    Category with name another does not exist
+2024-01-23 14:45:51,563 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 14:45:52,046 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 14:45:58,648 root         ERROR    Category with name another does not exist
+2024-01-23 14:47:22,371 root         ERROR    Category with name another does not exist
+2024-01-23 14:50:02,551 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 14:50:03,076 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 14:51:04,910 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 14:51:05,398 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 14:51:09,641 root         ERROR    Category with name another does not exist
+2024-01-23 14:52:35,056 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 14:52:35,554 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 14:52:37,877 root         ERROR    Category with name another does not exist
+2024-01-23 14:53:55,527 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 14:53:56,162 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 14:53:58,016 root         ERROR    Category with name another does not exist
+2024-01-23 14:54:47,676 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 14:54:48,284 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 14:55:13,298 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 14:55:13,790 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 14:55:17,176 root         ERROR    Category with name another does not exist
+2024-01-23 15:25:44,416 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 15:25:45,756 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 15:25:58,674 root         ERROR    Category with name another does not exist
+2024-01-23 15:41:13,167 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 15:41:14,176 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 15:41:15,754 root         ERROR    Error while importing advert from CSV: Direct assignment to the forward side of a many-to-many set is prohibited. Use categories.set() instead.
+2024-01-23 15:42:46,307 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 15:42:47,322 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 15:42:50,889 root         ERROR    Error while importing advert from CSV: Direct assignment to the forward side of a many-to-many set is prohibited. Use categories.set() instead.
+2024-01-23 15:44:53,463 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\serializers.py changed, reloading.
+2024-01-23 15:44:54,606 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 15:45:07,127 root         ERROR    Category with name another does not exist
+2024-01-23 15:45:57,806 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\serializers.py changed, reloading.
+2024-01-23 15:45:58,850 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 15:46:00,904 root         ERROR    Category with name another does not exist
+2024-01-23 15:46:09,748 root         ERROR    Category with name another does not exist
+2024-01-23 15:48:27,553 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 15:48:28,712 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 15:48:31,871 root         ERROR    Error while importing advert from CSV: Direct assignment to the forward side of a many-to-many set is prohibited. Use categories.set() instead.
+2024-01-23 15:48:57,460 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 15:48:58,481 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 15:53:55,568 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 15:53:56,450 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 15:56:06,957 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 15:56:08,158 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 15:56:23,185 root         ERROR    Error while importing advert from CSV: type object 'AdvertSerializer' has no attribute 'create_advert_from_csv'
+2024-01-23 15:56:56,235 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 15:56:57,584 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 15:57:01,229 root         ERROR    Error while importing advert from CSV: [Errno 2] No such file or directory: 'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\1.jpg'
+2024-01-23 15:59:47,478 root         ERROR    Error while importing advert from CSV: [WinError 123] Синтаксическая ошибка в имени файла, имени папки или метке тома: 'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\media\\avatars\\C:'
+2024-01-23 16:00:13,883 root         ERROR    Error while importing advert from CSV: [WinError 123] Синтаксическая ошибка в имени файла, имени папки или метке тома: 'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\media\\avatars\\C:'
+2024-01-23 16:01:01,776 root         ERROR    Error while importing advert from CSV: [Errno 2] No such file or directory: 'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\cuba.jpg'
+2024-01-23 16:01:20,444 root         ERROR    Error while importing advert from CSV: [WinError 123] Синтаксическая ошибка в имени файла, имени папки или метке тома: 'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\media\\avatars\\C:'
+2024-01-23 16:01:42,223 root         ERROR    Error while importing advert from CSV: [WinError 123] Синтаксическая ошибка в имени файла, имени папки или метке тома: 'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\media\\avatars\\C:'
+2024-01-23 16:02:02,532 root         ERROR    Error while importing advert from CSV: [WinError 123] Синтаксическая ошибка в имени файла, имени папки или метке тома: 'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\media\\avatars\\C:'
+2024-01-23 16:21:39,184 root         ERROR    Error while importing advert from CSV: [WinError 123] Синтаксическая ошибка в имени файла, имени папки или метке тома: 'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\media\\avatars\\C:'
+2024-01-23 16:21:46,670 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 16:21:52,357 root         ERROR    Error while importing advert from CSV: [WinError 123] Синтаксическая ошибка в имени файла, имени папки или метке тома: 'C:\\Users\\Nick\\Desktop\\git\\Advert-Project\\mytestprj\\advert\\media\\avatars\\C:'
+2024-01-23 16:24:34,624 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\serializers.py changed, reloading.
+2024-01-23 16:24:35,570 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 16:24:40,532 root         ERROR    Error while importing advert from CSV: 'Adverts' object has no attribute 'create_from_csv'
+2024-01-23 16:25:15,180 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 16:25:16,191 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 16:25:19,045 root         ERROR    Category with name another does not exist
+2024-01-23 16:25:19,049 root         ERROR    Error while importing advert from CSV: [Errno 2] No such file or directory: 'media\\avatars\\uba.jpg'
+2024-01-23 16:25:43,688 root         ERROR    Category with name another does not exist
+2024-01-23 17:05:47,156 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 17:05:48,051 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 17:07:31,803 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 17:07:33,107 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 17:08:54,671 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 17:08:55,487 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 17:09:03,550 root         ERROR    Error while importing advert from CSV: Direct assignment to the forward side of a many-to-many set is prohibited. Use categories.set() instead.
+2024-01-23 17:09:26,413 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 17:09:27,294 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 17:09:58,880 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 17:09:59,904 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 17:10:06,007 root         ERROR    Error while importing advert from CSV: 'QuerySet' object has no attribute 'id'
+2024-01-23 17:12:23,568 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 17:12:24,596 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 17:12:38,542 root         ERROR    Category with name another does not exist
+2024-01-23 17:14:36,926 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 17:14:37,992 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 17:14:55,097 root         ERROR    Category with name another does not exist
+2024-01-23 17:15:27,776 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 17:15:28,970 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 17:28:48,545 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 17:28:49,339 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 17:30:25,054 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 17:30:26,134 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 17:30:30,127 root         ERROR    Error creating AdvertCategory: Cannot assign "'another'": "AdvertCategory.category" must be a "Category" instance.
+2024-01-23 17:31:43,895 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 17:31:44,796 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 17:31:56,158 root         ERROR    Error creating AdvertCategory: Cannot assign "<QuerySet []>": "AdvertCategory.category" must be a "Category" instance.
+2024-01-23 17:34:44,278 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 17:34:45,186 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 17:34:48,553 root         ERROR    Error creating AdvertCategory: type object 'Category' has no attribute 'get'
+2024-01-23 17:35:09,317 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 17:35:10,362 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 17:37:42,935 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 17:37:43,850 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 17:37:50,563 root         ERROR    Error creating AdvertCategory: Category matching query does not exist.
+2024-01-23 17:38:58,290 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 17:38:59,286 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 17:39:01,732 root         ERROR    Error creating AdvertCategory: Category matching query does not exist.
+2024-01-23 17:39:28,907 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 17:39:29,736 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 17:39:35,023 root         ERROR    Error creating AdvertCategory: Category matching query does not exist.
+2024-01-23 17:39:47,138 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 17:39:48,024 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 17:40:02,905 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 17:40:04,388 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 17:40:08,389 root         ERROR    Error creating AdvertCategory: save() prohibited to prevent data loss due to unsaved related object 'advert'.
+2024-01-23 17:41:14,142 root         ERROR    Error creating AdvertCategory: save() prohibited to prevent data loss due to unsaved related object 'advert'.
+2024-01-23 17:42:37,851 root         ERROR    Error creating AdvertCategory: save() prohibited to prevent data loss due to unsaved related object 'advert'.
+2024-01-23 17:44:12,731 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 17:44:13,239 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-23 17:45:54,107 django.utils.autoreload INFO     C:\Users\Nick\Desktop\git\Advert-Project\mytestprj\advert\api\views.py changed, reloading.
+2024-01-23 17:45:54,608 django.utils.autoreload INFO     Watching for file changes with StatReloader

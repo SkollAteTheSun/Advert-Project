@@ -1,6 +1,8 @@
 from django.db import models
 
 from django.contrib.auth.models import User
+from django.core.files import File
+import csv
 
 class Category(models.Model):
 
@@ -14,19 +16,20 @@ class Category(models.Model):
 
 
 class PublishedAdvertManager(models.Manager):
-    def get_queryset(self):
+    def published(self):
         return super().get_queryset().filter(published=True)
 
 class Advert(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='adverts', verbose_name="Автор объявления")
-    categories = models.ManyToManyField(Category, through='AdvertCategory', related_name='adverts', verbose_name="Категории")
+    categories = models.ManyToManyField(Category, through='AdvertCategory', related_name='adverts',
+                                        verbose_name="Категории")
     name = models.CharField(max_length=60, verbose_name="Название объявления")
     description = models.TextField(verbose_name="Описание")
     photo = models.ImageField(upload_to='avatars', verbose_name="Фото вещи")
     published = models.BooleanField(default=True, verbose_name="Опубликовано")
 
-    objects = models.Manager()
-    published_objects = PublishedAdvertManager()
+    #published_objects = PublishedAdvertManager()
+    objects = PublishedAdvertManager()
 
     def __str__(self):
         return str(self.name)

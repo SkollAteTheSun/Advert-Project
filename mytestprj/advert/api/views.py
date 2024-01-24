@@ -1,7 +1,12 @@
+import logging
+
 from drf_spectacular.utils import extend_schema
 from rest_framework.response import Response
 from rest_framework import generics, status, permissions
 from rest_framework.views import APIView
+from django.http import JsonResponse
+from rest_framework.parsers import FileUploadParser
+from rest_framework import viewsets, mixins
 
 from .models import *
 from .serializers import *
@@ -105,6 +110,7 @@ class CategoryDetail(generics.GenericAPIView):
         category.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+#class Adverts(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.CreateModelMixin):
 class Adverts(generics.GenericAPIView):
     serializer_class = AdvertSerializer
     queryset = Advert.objects.all()
@@ -113,14 +119,11 @@ class Adverts(generics.GenericAPIView):
     def get(self, request):
 
         name_param = request.GET.get('name')
-
         category_param = request.GET.get('categories')
-
-        adverts = Advert.published_objects.all()
+        adverts = Advert.objects.published()
 
         if name_param:
             adverts = adverts.filter(name__icontains=name_param)
-
         if category_param:
             adverts = adverts.filter(categories=category_param)
 
@@ -133,17 +136,73 @@ class Adverts(generics.GenericAPIView):
 
     @extend_schema(tags=["Advert"])
     def post(self, request):
-
-        if not request.user.is_authenticated:
-            return Response({"status": "fail", "message": "Войдите в аккаунт"}, status=status.HTTP_400_BAD_REQUEST)
-
-        serializer = self.serializer_class(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response({"status": "success", "data": {"advert": serializer.data}}, status=status.HTTP_201_CREATED)
+        if 'csv_file' in request.FILES:
+            csv_file = request.FILES['csv_file']
+            return self.import_adverts_from_csv(csv_file)
         else:
-            return Response({"status": "fail", "message": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+            if not request.user.is_authenticated:
+                return Response({"status": "fail", "message": "Войдите в аккаунт"}, status=status.HTTP_400_BAD_REQUEST)
 
+            serializer = self.serializer_class(data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response({"status": "success", "data": {"advert": serializer.data}},
+                                status=status.HTTP_201_CREATED)
+            else:
+                return Response({"status": "fail", "message": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+
+    def import_adverts_from_csv(self, csv_file):
+        try:
+            decoded_file = csv_file.read().decode('utf-8').splitlines()
+            reader = csv.DictReader(decoded_file)
+            for row in reader:
+                try:
+                    self.create_advert_from_csv(row)
+                except Exception as e:
+                    logging.error(f'Error while importing advert from CSV: {str(e)}')
+
+            return Response({'status': 'success', 'message': 'Объявления успешно импортированы'})
+        except Exception as e:
+            logging.error(f'Error during CSV import: {str(e)}')
+            return Response({'status': 'fail', 'message': str(e)})
+
+    def create_advert_from_csv(self, csv_row):
+        name = csv_row.get('name')
+        description = csv_row.get('description')
+        photo_path = csv_row.get('photo_path')
+        published = csv_row.get('published')
+        main_category_name = csv_row.get('main_category_name')
+
+        advert = Advert(
+            name=name,
+            description=description,
+            published=published,
+        )
+
+        print(main_category_name)
+
+        user = User.objects.first()
+        advert.user = user
+
+        if photo_path:
+            photo_path = os.path.join('media', 'avatars', csv_row.get('photo_path'))
+            with open(photo_path, 'rb') as photo_file:
+                advert.photo.save(photo_path, File(photo_file))
+        else:
+            logging.error(f'Photo path: {str(photo_path)}')
+
+        advert.save()
+
+        if main_category_name:
+            try:
+                main_category_instance = Category.objects.get(name=main_category_name)
+                #all_categories = Category.objects.all()
+                #print(f"All categories: {all_categories}")
+                AdvertCategory.objects.create(advert=advert, category=main_category_instance, is_main=True)
+            except Exception as e:
+                logging.error(f'Error creating AdvertCategory: {str(e)}')
+
+        return advert
 
 class AdvertDetail(generics.GenericAPIView):
     queryset = Advert.objects.all()

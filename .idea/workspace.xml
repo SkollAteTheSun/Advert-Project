@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4cd5e1fa-be17-46ab-80a4-c71d402ab1c0" name="Changes" comment="managers +">
+    <list default="true" id="4cd5e1fa-be17-46ab-80a4-c71d402ab1c0" name="Changes" comment="managers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mytestprj/advert/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mytestprj/advert/api/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mytestprj/advert/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/mytestprj/advert/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytestprj/advert/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mytestprj/advert/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mytestprj/advert/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mytestprj/advert/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytestprj/advert/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/mytestprj/advert/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mytestprj/advert/media/avatars/Без_названия_1lAcUKh.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mytestprj/advert/media/avatars/1.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,14 +26,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Nick/Desktop/git/Advert-Project"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nick/Desktop/git/Advert-Project&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -52,6 +55,8 @@
       <workItem from="1705570511255" duration="4125000" />
       <workItem from="1705831137433" duration="27000" />
       <workItem from="1705844901823" duration="5010000" />
+      <workItem from="1705912059174" duration="20185000" />
+      <workItem from="1705997545811" duration="18555000" />
     </task>
     <task id="LOCAL-00001" summary="Update models">
       <created>1704958612019</created>
@@ -109,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705585638355</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="managers">
+      <created>1705912093033</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1705912093033</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +146,7 @@
     <MESSAGE value="many to many" />
     <MESSAGE value="admin + migrations" />
     <MESSAGE value="hide_adverts + migrations" />
-    <option name="LAST_COMMIT_MESSAGE" value="hide_adverts + migrations" />
+    <MESSAGE value="managers" />
+    <option name="LAST_COMMIT_MESSAGE" value="managers" />
   </component>
 </project>
