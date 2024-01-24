@@ -28,7 +28,6 @@ class Advert(models.Model):
     photo = models.ImageField(upload_to='avatars', verbose_name="Фото вещи")
     published = models.BooleanField(default=True, verbose_name="Опубликовано")
 
-    #published_objects = PublishedAdvertManager()
     objects = PublishedAdvertManager()
 
     def __str__(self):

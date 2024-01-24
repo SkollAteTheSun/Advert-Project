@@ -2,7 +2,6 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    #path('adverts/', Adverts.as_view(actions={'get': 'list', 'post': 'create'}), name='adverts-list'),
     path('adverts/', Adverts.as_view(), name='adverts-list'),
     path('adverts/import-csv/', Adverts.as_view(), name='import-adverts-csv'),
 
@@ -15,6 +14,4 @@ urlpatterns = [
     path('proposals/', Proposals.as_view(), name='proposals-list'),
     path('proposals/<int:proposal_id>/', ProposalDetail.as_view(), name='proposal-detail'),
     path('proposals/<int:proposal_id>/accept/', AcceptProposalAPIView.as_view(), name='accept-proposal'),
-
-    #path('adverts/import-csv/', Adverts.as_view({'post': 'import_adverts_from_csv'}), name='import-adverts-csv'),
 ]

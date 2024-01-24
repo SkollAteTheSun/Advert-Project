@@ -110,7 +110,6 @@ class CategoryDetail(generics.GenericAPIView):
         category.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-#class Adverts(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.CreateModelMixin):
 class Adverts(generics.GenericAPIView):
     serializer_class = AdvertSerializer
     queryset = Advert.objects.all()
@@ -196,8 +195,6 @@ class Adverts(generics.GenericAPIView):
         if main_category_name:
             try:
                 main_category_instance = Category.objects.get(name=main_category_name)
-                #all_categories = Category.objects.all()
-                #print(f"All categories: {all_categories}")
                 AdvertCategory.objects.create(advert=advert, category=main_category_instance, is_main=True)
             except Exception as e:
                 logging.error(f'Error creating AdvertCategory: {str(e)}')
@@ -207,16 +204,12 @@ class Adverts(generics.GenericAPIView):
 class AdvertDetail(generics.GenericAPIView):
     queryset = Advert.objects.all()
     serializer_class = AdvertSerializer
-
-
     @extend_schema(tags=["Advert"])
     def get_advert(self, advert_id):
         try:
             return Advert.objects.get(id=advert_id)
         except:
             return None
-
-
     @extend_schema(tags=["Advert"])
     def get(self, request, advert_id):
 
@@ -227,7 +220,6 @@ class AdvertDetail(generics.GenericAPIView):
 
         serializer = self.serializer_class(advert)
         return Response({"status": "success", "data": {"advert": serializer.data}})
-
 
     @extend_schema(tags=["Advert"])
     def patch(self, request, advert_id):
@@ -248,7 +240,6 @@ class AdvertDetail(generics.GenericAPIView):
             return Response({"status": "success", "data": {"advert": serializer.data}})
 
         return Response({"status": "fail", "message": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
-
 
     @extend_schema(tags=["Advert"])
     def delete(self, request, advert_id):
