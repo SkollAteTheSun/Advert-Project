@@ -1,4 +1,4 @@
 .idea/
-venv/
-media/
-debug.log
+mytestprj/advert/venv/
+mytestprj/advert/media/
+mytestprj/advert/debug.log
