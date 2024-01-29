@@ -1,4 +1,5 @@
 import logging
+from urllib import request
 
 from drf_spectacular.utils import extend_schema
 from rest_framework.response import Response
@@ -135,6 +136,7 @@ class Adverts(generics.GenericAPIView):
         })
 
 class ImportCSVView(generics.GenericAPIView):
+    #form = CSVUploadForm(request.POST, request.FILES)
     @extend_schema(tags=["Advert"])
     def post(self, request):
         if 'csv_file' in request.FILES:
@@ -202,7 +204,6 @@ class ImportCSVView(generics.GenericAPIView):
                 logging.error(f'Error creating AdvertCategory: {str(e)}')
 
         return advert
-
 
 
 class AdvertDetail(generics.GenericAPIView):

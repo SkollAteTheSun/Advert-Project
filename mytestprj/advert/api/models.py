@@ -19,6 +19,10 @@ class PublishedAdvertManager(models.Manager):
     def published(self):
         return super().get_queryset().filter(published=True)
 
+class AdvertImport(models.Model):
+    csv_file = models.FileField(upload_to='uploads/')
+    date_added = models.DateTimeField(auto_now_add=True)
+
 class Advert(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='adverts', verbose_name="Автор объявления")
     categories = models.ManyToManyField(Category, through='AdvertCategory', related_name='adverts',

@@ -2,12 +2,10 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path('adverts/', Adverts.as_view(), name='adverts-list'),
-    path('adverts/import-csv/', ImportCSVView.as_view(), name='import-adverts-csv'),
-    #path('adverts/upload_csv/', upload_csv, name='upload_csv'),
-
+    path('test/import-csv/', ImportCSVView.as_view(), name='import-adverts-csv'),
     path('adverts/<int:advert_id>/', AdvertDetail.as_view(), name='advert-detail'),
     path('adverts/<int:advert_id>/proposals', AdvertProposalsAPIView.as_view(), name='advert-proposals'),
+    path('adverts/', Adverts.as_view(), name='adverts-list'),
 
     path('categories/', Categories.as_view(), name='categories-list'),
     path('categories/<int:category_id>/', CategoryDetail.as_view(), name='category-detail'),
