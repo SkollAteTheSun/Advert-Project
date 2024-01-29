@@ -15,6 +15,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 #ALLOWED_HOSTS = list(os.environ.get('ALLOWED_HOSTS'))
 
+
 INSTALLED_APPS = [
     'jet.dashboard',
     'jet',

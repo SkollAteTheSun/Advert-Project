@@ -3,7 +3,8 @@ from .views import *
 
 urlpatterns = [
     path('adverts/', Adverts.as_view(), name='adverts-list'),
-    path('adverts/import-csv/', Adverts.as_view(), name='import-adverts-csv'),
+    path('adverts/import-csv/', ImportCSVView.as_view(), name='import-adverts-csv'),
+    #path('adverts/upload_csv/', upload_csv, name='upload_csv'),
 
     path('adverts/<int:advert_id>/', AdvertDetail.as_view(), name='advert-detail'),
     path('adverts/<int:advert_id>/proposals', AdvertProposalsAPIView.as_view(), name='advert-proposals'),

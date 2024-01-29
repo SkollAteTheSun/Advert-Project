@@ -8,6 +8,7 @@ from django.http import JsonResponse
 from rest_framework.parsers import FileUploadParser
 from rest_framework import viewsets, mixins
 
+from .forms import CSVUploadForm
 from .models import *
 from .serializers import *
 
@@ -133,6 +134,7 @@ class Adverts(generics.GenericAPIView):
             "adverts": serializer.data
         })
 
+class ImportCSVView(generics.GenericAPIView):
     @extend_schema(tags=["Advert"])
     def post(self, request):
         if 'csv_file' in request.FILES:
@@ -200,6 +202,8 @@ class Adverts(generics.GenericAPIView):
                 logging.error(f'Error creating AdvertCategory: {str(e)}')
 
         return advert
+
+
 
 class AdvertDetail(generics.GenericAPIView):
     queryset = Advert.objects.all()
