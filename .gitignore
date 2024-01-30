@@ -2,3 +2,5 @@
 mytestprj/advert/venv/
 mytestprj/advert/media/
 mytestprj/advert/debug.log
+mytestprj/Pipfile
+mytestprj/Pipfile.lock

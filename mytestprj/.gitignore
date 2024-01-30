@@ -2,3 +2,5 @@
 venv/
 media/
 debug.log
+Pipfile
+Pipfile.lock
